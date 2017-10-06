@@ -19,7 +19,7 @@ zuul:
   routes:
     customerproxy:
       path: /customer/*
-      serviceId: customer-service
+      serviceId: play-customer-service
       stripPrefix: false
 
 
