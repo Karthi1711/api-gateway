@@ -8,10 +8,6 @@ spring:
 security:
   basic:
     enabled: false
-#zuul.routes.customerproxy.path=/customer/*
-#zuul.routes.customerproxy.serviceId=CUSTOMERSERVICE
-#zuul.routes.customerproxy.stripPrefix=false
-
 
 logging:
   level:
