@@ -18,8 +18,8 @@ logging:
 zuul:
   routes:
     customerproxy:
-      path: /customer/*
-      serviceId: play-customer-service
+      path: /inventory/*
+      serviceId: play-inventory-service
       stripPrefix: false
 
 
