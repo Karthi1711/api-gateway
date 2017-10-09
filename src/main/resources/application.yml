@@ -17,8 +17,9 @@ logging:
 
 zuul:
   routes:
-    customerproxy:
+    inventoryproxy:
       path: /inventory/*
+      url: https://play-inventory-service.local.pcfdev.io
       serviceId: play-inventory-service
       stripPrefix: false
 
