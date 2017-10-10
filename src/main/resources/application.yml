@@ -18,19 +18,18 @@ logging:
 zuul:
   ignoredPatterns: /api, /swagger-ui.html, /actuator/**, /configuration/**, /webjars/**, /swagger-resources/**, /swagger-composite/**, /v2/**, /jv/redirect/**, /heartbeat, /gateway/**, /favicon.ico, /public ,/login
   routes:
-    inventoryproxy:
-      path: /inventory/**
-#      url: https://play-inventory-service.local.pcfdev.io
-      serviceId: play-inventory-service
-      stripPrefix: false
-
+#    playinventoryproxy:
+#      path: /inventory/**
+##      url: https://play-inventory-service.local.pcfdev.io
+#      serviceId: play-inventory-service
+#      stripPrefix: false
     customerproxy:
-      path: /customer/*
+      path: /customer/**
 #      url: https://customer-service.local.pcfdev.io
       serviceId: customer-service
       stripPrefix: false
     inventoryproxy:
-      path: /inventory/*
+      path: /inventory/**
 #      url: https://inventory-service.local.pcfdev.io
       serviceId: inventory-service
       stripPrefix: false
