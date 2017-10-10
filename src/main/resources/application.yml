@@ -16,23 +16,24 @@ logging:
     com.oms.apigateway: DEBUG
 
 zuul:
-  ignoredPatterns: /swagger-ui.html
+  ignoredPatterns: /api, /swagger-ui.html, /actuator/**, /configuration/**, /webjars/**, /swagger-resources/**, /swagger-composite/**, /v2/**, /jv/redirect/**, /heartbeat, /gateway/**, /favicon.ico, /public ,/login
   routes:
     inventoryproxy:
-      path: /inventory/*
-      url: https://play-inventory-service.local.pcfdev.io
+      path: /inventory/**
+#      url: https://play-inventory-service.local.pcfdev.io
       serviceId: play-inventory-service
       stripPrefix: false
-#    customerproxy:
-#      path: /customer/*
+
+    customerproxy:
+      path: /customer/*
 #      url: https://customer-service.local.pcfdev.io
-#      serviceId: customer-service
-#      stripPrefix: false
-#    inventoryproxy:
-#      path: /inventory/*
+      serviceId: customer-service
+      stripPrefix: false
+    inventoryproxy:
+      path: /inventory/*
 #      url: https://inventory-service.local.pcfdev.io
-#      serviceId: inventory-service
-#      stripPrefix: false
+      serviceId: inventory-service
+      stripPrefix: false
 
 
 
