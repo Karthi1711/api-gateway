@@ -24,16 +24,16 @@ zuul:
       serviceId: play-inventory-service
       stripPrefix: false
 
-#    customerproxy:
-#      path: /customer/*
+    customerproxy:
+      path: /customer/*
 #      url: https://customer-service.local.pcfdev.io
-#      serviceId: customer-service
-#      stripPrefix: false
-#    inventoryproxy:
-#      path: /inventory/*
+      serviceId: customer-service
+      stripPrefix: false
+    inventoryproxy:
+      path: /inventory/*
 #      url: https://inventory-service.local.pcfdev.io
-#      serviceId: inventory-service
-#      stripPrefix: false
+      serviceId: inventory-service
+      stripPrefix: false
 
 
 
