@@ -16,7 +16,7 @@ logging:
     com.oms.apigateway: DEBUG
 
 zuul:
-  prefix: /api
+#  prefix: /api
   ignoredPatterns: /api, /swagger-ui.html, /actuator/**, /configuration/**, /webjars/**, /swagger-resources/**, /api/**, /v2/**, /jv/redirect/**, /heartbeat, /gateway/**, /favicon.ico, /public, /login
   routes:
     customerproxy:
@@ -25,7 +25,7 @@ zuul:
       serviceId: customer-service
       stripPrefix: false
     inventoryproxy:
-      path: /inventory/**
+      path: /**
       serviceId: inventory-service
       stripPrefix: false
     productproxy:
