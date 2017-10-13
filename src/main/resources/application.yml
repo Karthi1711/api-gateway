@@ -15,9 +15,18 @@ logging:
     org.springframework.web: ERROR
     com.oms.apigateway: DEBUG
 
+oms:
+  common:
+    web:
+      config:
+        swagger:
+          enabled: false
+
+
 zuul:
   prefix: /api
-  ignoredPatterns: /api, /swagger-ui.html, /actuator/**, /configuration/**, /webjars/**, /swagger-resources/**, /api/**, /v2/**, /jv/redirect/**, /heartbeat, /gateway/**, /favicon.ico, /public, /login
+  ignoredServices: '*'
+  ignoredPatterns: /api, /swagger-ui.html, /actuator/**, /configuration/**, /webjars/**, /swagger-resources/**, /swagger-composite/**, /v2/**, /jv/redirect/**, /heartbeat, /gateway/**, /favicon.ico, /public
   routes:
     customerproxy:
       path: /customer/**
